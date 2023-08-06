@@ -28,13 +28,28 @@ def taoCicle():
         tao.left(15)
         tao.color(random.choice(taoColor))
 
+def taoTriangle():
+    for i in range(24):
+        tao.forward(75)
+        tao.left(135)
+        tao.color(random.choice(taoColor))
+        tao.forward(75)
+        tao.left(135)
+        tao.color(random.choice(taoColor))
+        tao.forward(75)
+        tao.left(15)
+
 for i in range(3):
     taoCicle()
     tao.penup()
-    tao.goto(random.randint(-960,960),random.randint(-540,540))
+    tao.goto(random.randint(-800,800),random.randint(-500,500))
     tao.pendown()
     rectangle()
     tao.penup()
-    tao.goto(random.randint(-960,960),random.randint(-540,540))
+    tao.goto(random.randint(-800,800),random.randint(-500,500))
+    tao.pendown()
+    taoTriangle()
+    tao.penup()
+    tao.goto(random.randint(-800,800),random.randint(-500,500))
     tao.pendown()
 
